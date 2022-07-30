@@ -1,4 +1,1 @@
-
-export const MainComponent = () => {
-  return <div>Main Component</div>
-}
+export const MainComponent = () => <div>Main Component</div>

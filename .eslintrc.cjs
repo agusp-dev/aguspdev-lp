@@ -12,6 +12,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
     'airbnb',
   ],
   parserOptions: {
@@ -23,15 +24,9 @@ module.exports = {
   },
   plugins: [
     'react',
-    'plugin:react/recommended',
+    'react-hooks',
   ],
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [['@', 'src']],
-      },
-    },
-  },
+  settings: {},
   rules: {
     semi: RULES.OFF,
     'max-len': [RULES.ERROR, { code: 120 }],
@@ -40,5 +35,9 @@ module.exports = {
     'react/react-in-jsx-scope': RULES.OFF,
     'react/function-component-definition': RULES.OFF,
     'react/jsx-filename-extension': [0],
+    'import/extensions': RULES.OFF,
+    'import/no-unresolved': RULES.OFF,
+    'import/named': RULES.OFF,
+    'comma-dangle': RULES.OFF,
   },
 };
