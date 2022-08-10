@@ -39,5 +39,7 @@ module.exports = {
     'import/no-unresolved': RULES.OFF,
     'import/named': RULES.OFF,
     'comma-dangle': RULES.OFF,
+    quotes: [RULES.ERROR, 'single', 'avoid-escape'],
+    'jsx-quotes': [RULES.ERROR, 'prefer-single'],
   },
 };
