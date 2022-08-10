@@ -37,5 +37,10 @@
     "*.{js,jsx}": [
       "npx eslint --cache --fix"
     ]
+  },
+  "engines": {
+    "node": "16.15.1",
+    "npm": ">=6.0.0",
+    "yarn": "please-use-npm"
   }
 }
