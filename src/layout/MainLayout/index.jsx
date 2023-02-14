@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
+import { Box } from '@chakra-ui/react'
+import { Appbar } from '~/components'
 
 export const MainLayout = ({ children }) => (
-  <div>
-    <header>Header</header>
+  <Box width='full' height='full'>
+    <Appbar />
     { children }
-  </div>
+  </Box>
 )
 
 MainLayout.propTypes = {

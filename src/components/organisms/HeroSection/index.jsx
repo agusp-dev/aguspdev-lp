@@ -1,8 +1,8 @@
 import {
-  Center, Container, Flex, Image, Stack, Heading, Text, Button, useTheme, Box
+  Center, Container, Flex, Stack, Heading, Text, Button, useTheme, Box
 } from '@chakra-ui/react'
 import HeroImage from '~/assets/hero_bg.svg'
-import ProfileImage from '~/assets/profile_img.jpg'
+import { ProfileImage } from '~/components/molecules'
 
 export const HeroSection = () => {
   const theme = useTheme()
@@ -23,12 +23,10 @@ export const HeroSection = () => {
           alignItems='center'
           justifyContent='center'
         >
-          <Image
-            src={ProfileImage}
-            alt='My profile'
+          <ProfileImage
             width={{ base: '8.2rem', sm: '9.2rem', md: '12rem' }}
             borderRadius='50%'
-            border={`2px solid ${theme.color.white}`}
+            border={`1px solid ${theme.color.white}`}
           />
           <Stack>
             <Heading as='h1' fontSize={{ base: '2.5rem', sm: '3rem', md: '4.2rem' }} textAlign='center'>
@@ -49,7 +47,6 @@ export const HeroSection = () => {
             >
               <Button
                 border='1px'
-                // size={{ base: 'sm', sm: 'md' }}
                 variant='outline'
                 borderColor={theme.color.mainCyan}
                 color={theme.color.white}
