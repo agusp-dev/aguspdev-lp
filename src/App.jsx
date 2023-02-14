@@ -1,8 +1,11 @@
-import { Center } from '@chakra-ui/react'
-import { MainComponent } from '~/components'
+import { Stack } from '@chakra-ui/react'
+import { MainLayout } from '~/layout'
+import { HeroSection } from './components'
 
 export const App = () => (
-  <Center w='100%' h='95vh'>
-    <MainComponent />
-  </Center>
+  <MainLayout>
+    <Stack>
+      <HeroSection />
+    </Stack>
+  </MainLayout>
 )
