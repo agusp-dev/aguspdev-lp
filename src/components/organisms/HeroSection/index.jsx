@@ -16,31 +16,50 @@ export const HeroSection = () => {
       color={theme.color.white}
     >
       <Container maxW='3xl' centerContent>
-        <Flex gap='1.4rem' flexWrap='wrap' alignItems='center' justifyContent='center'>
+        <Flex
+          flexDirection={{ base: 'column', sm: 'row' }}
+          gap='1.4rem'
+          flexWrap='wrap'
+          alignItems='center'
+          justifyContent='center'
+        >
           <Image
             src={ProfileImage}
             alt='My profile'
-            width='12rem'
-            height='12rem'
+            width={{ base: '8.2rem', sm: '9.2rem', md: '12rem' }}
             borderRadius='50%'
             border={`2px solid ${theme.color.white}`}
           />
           <Stack>
-            <Heading as='h1' size='3xl' textAlign='center'>
+            <Heading as='h1' fontSize={{ base: '2.5rem', sm: '3rem', md: '4.2rem' }} textAlign='center'>
               Hi, I&apos;m Agustin!
             </Heading>
             <Text
-              fontSize='xl'
+              fontSize={{ base: '1.2rem', sm: '1.3rem', md: '1.5rem' }}
               color={theme.color.mainCyan}
+              textAlign={{ base: 'center', sm: 'left' }}
+              mt={{ sm: '0 !important' }}
             >
-              Passionate Fullstack Engineer
+              Passionate Frontend Engineer
             </Text>
-            <Box marginTop='1.2rem !important'>
+            <Box
+              marginTop={{ base: '1.8rem !important', sm: '1.4rem !important' }}
+              display={{ base: 'flex', sm: 'block' }}
+              justifyContent={{ base: 'center' }}
+            >
               <Button
                 border='1px'
-                borderColor={theme.color.mainCyan}
+                // size={{ base: 'sm', sm: 'md' }}
                 variant='outline'
-                size='sm'
+                borderColor={theme.color.mainCyan}
+                color={theme.color.white}
+                fontWeight={400}
+                _hover={{
+                  backgroundColor: `${theme.color.mainCyan}33`
+                }}
+                _active={{
+                  backgroundColor: `${theme.color.mainCyan}66`
+                }}
               >
                 Read More
               </Button>
