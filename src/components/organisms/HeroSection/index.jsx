@@ -1,8 +1,24 @@
 import {
   Center, Container, Flex, Stack, Heading, Text, Button, useTheme, Box
 } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 import HeroImage from '~/assets/hero_bg.svg'
 import { ProfileImage } from '~/components/molecules'
+
+const StyledTransparentLayer = styled.div(
+  ({ theme }) => `
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      to top, 
+      ${theme.color.hardBlue} 1%, 
+      ${theme.color.black}11 35%
+    );
+  `
+)
 
 export const HeroSection = () => {
   const theme = useTheme()
@@ -64,6 +80,7 @@ export const HeroSection = () => {
           </Stack>
         </Flex>
       </Container>
+      <StyledTransparentLayer />
     </Center>
   )
 }

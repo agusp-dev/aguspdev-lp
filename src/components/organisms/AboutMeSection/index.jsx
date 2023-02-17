@@ -18,7 +18,7 @@ export const AboutMeSection = () => {
     <Center
       width='full'
       px='1rem'
-      py={{ base: '4rem', md: '6.8rem' }}
+      pb={{ base: '4rem', md: '6.8rem' }}
       bg={theme.color.hardBlue}
     >
       <Container maxW='3xl' centerContent>
