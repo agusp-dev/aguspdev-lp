@@ -1,4 +1,5 @@
 import {
+  Box,
   Stack,
   useTheme
 } from '@chakra-ui/react'
@@ -8,7 +9,7 @@ import { DATA } from './data'
 export const LatestProjectsSection = () => {
   const theme = useTheme()
   return (
-    <Stack
+    <Box
       width='full'
       height='full'
       bgColor={theme.color.softGray1}
@@ -25,6 +26,6 @@ export const LatestProjectsSection = () => {
           {DATA?.map(({ id, ...props }) => <ProjectCard key={id} id={id} {...props} />)}
         </Stack>
       </Stack>
-    </Stack>
+    </Box>
   )
 }

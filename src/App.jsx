@@ -4,7 +4,8 @@ import {
   HeroSection,
   AboutMeSection,
   MyCareerSection,
-  LatestProjectsSection
+  LatestProjectsSection,
+  ContactSection
 } from './components'
 
 export const App = () => (
@@ -14,6 +15,7 @@ export const App = () => (
       <AboutMeSection />
       <MyCareerSection />
       <LatestProjectsSection />
+      <ContactSection />
     </Stack>
   </MainLayout>
 )
