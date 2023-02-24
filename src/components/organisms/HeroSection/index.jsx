@@ -17,6 +17,7 @@ const StyledTransparentLayer = styled.div(
       ${theme.color.hardBlue} 1%, 
       ${theme.color.black}11 35%
     );
+    z-index: 800;
   `
 )
 

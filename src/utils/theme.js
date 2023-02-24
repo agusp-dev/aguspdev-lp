@@ -1,5 +1,15 @@
 import { extendTheme } from '@chakra-ui/react'
 
+/**
+ * const breakpoints = {
+    sm: '30em',
+    md: '48em',
+    lg: '62em',
+    xl: '80em',
+    '2xl': '96em',
+  }
+ */
+
 const customTheme = {
   color: {
     white: '#ffffff',
@@ -10,8 +20,11 @@ const customTheme = {
 
     mainCyan: '#6396ef',
 
-    gray: '#888',
+    darkBlueGray: '#1A2129',
+
+    gray: '#888888',
     softGray: '#f6f6f6',
+    softGray1: '#f3f3f3',
   }
 }
 
