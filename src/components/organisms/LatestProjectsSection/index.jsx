@@ -21,7 +21,7 @@ export const LatestProjectsSection = () => {
         >
           Latest Projects
         </SectionTitle>
-        <Stack width='100%' alignItems='center' gap='1.4rem'>
+        <Stack width='100%' alignItems='center' gap='.8rem'>
           {DATA?.map(({ id, ...props }) => <ProjectCard key={id} id={id} {...props} />)}
         </Stack>
       </Stack>

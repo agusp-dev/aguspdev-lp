@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import {
-  Box,
   Heading,
   Text,
   Stack,
@@ -10,11 +9,10 @@ import {
 import styled from '@emotion/styled'
 import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
-const StyledCard = styled(Box)(
+const StyledCard = styled(Stack)(
   ({ theme }) => `
     width: 18rem;
-    display: flex;
-    flex-direction: column;
+    gap: 1.2rem;
     background-color: ${theme.color.white};
     padding: 3.2rem 1.4rem;
     border-radius: .4rem;

@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import {
   Box,
@@ -11,12 +12,15 @@ import {
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { ProfileImage } from '../ProfileImage'
+import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
 const StyledCard = styled(Box)(
-  ({ theme }) => `
+  ({ theme, isMobileScreen }) => `
     width: 100%;
-    max-width: 72rem;
+    max-width: ${isMobileScreen ? '32rem' : '72rem'};
     display: flex;
+    flex-direction: ${!isMobileScreen ? 'row' : 'column'};
+    align-items: ${isMobileScreen && 'center'};
     gap: 1.4rem;
     background-color: ${theme.color.white};
     border-radius: .4rem;
@@ -62,13 +66,15 @@ export const ProjectCard = ({
   // githubUrl,
 }) => {
   const theme = useTheme()
+  const screenSize = useScreenSize()
+  const isMobileScreen = useMemo(() => screenSize === CURRENT_SCREEN.MOBILE, [screenSize])
   return (
-    <StyledCard>
+    <StyledCard isMobileScreen={isMobileScreen}>
       <Image
         src={previewImg}
         alt={title}
-        width={400}
-        height={260}
+        width={isMobileScreen ? '100%' : 400}
+        height={isMobileScreen ? '100%' : 260}
         borderRadius='.4rem'
       />
       <Stack flexGrow={1}>
@@ -84,7 +90,7 @@ export const ProjectCard = ({
         </Heading>
         {shortDescription && (
           <Text
-            noOfLines={2}
+            noOfLines={3}
             fontSize='.9rem'
             fontWeight={300}
           >
@@ -102,6 +108,7 @@ export const ProjectCard = ({
             <Text
               as='cite'
               fontSize='1rem'
+              noOfLines={3}
               fontWeight={300}
               color={theme.color.hardBlue}
             >
@@ -110,7 +117,7 @@ export const ProjectCard = ({
           </StyledMyWorkCard>
         )}
         {techStack?.length && (
-          <Flex gap='.4rem' mt='.8rem !important'>
+          <Flex mt='.8rem !important' gap='.4rem' flexWrap='wrap'>
             {techStack?.map((tech) => (
               <StyledTechChip key={tech}>{ tech }</StyledTechChip>
             ))}
