@@ -76,7 +76,7 @@ const MobileMenu = () => {
       <StyledCollapse in={isOpen} animateOpacity>
         <Stack
           width='full'
-          bg={`${theme.color.hardBlue}88`}
+          bg={`${theme.color.black}44`}
           p='1rem'
           position='fixed'
           top='4.2rem'
@@ -116,12 +116,13 @@ export const Appbar = () => {
       position='fixed'
       width='full'
       height='4.8rem'
-      bg={`${theme.color.black}11`}
+      bg={`${theme.color.black}44`}
       color='white'
       display='flex'
       alignItems='center'
       justifyContent='space-between'
       paddingX={{ base: '1rem', md: '2rem' }}
+      zIndex={999}
     >
       <ProfileImage
         width={{ base: '2.4rem' }}
