@@ -1,6 +1,11 @@
 import { Stack } from '@chakra-ui/react'
 import { MainLayout } from '~/layout'
-import { HeroSection, AboutMeSection, MyCareerSection } from './components'
+import {
+  HeroSection,
+  AboutMeSection,
+  MyCareerSection,
+  LatestProjectsSection
+} from './components'
 
 export const App = () => (
   <MainLayout>
@@ -8,6 +13,7 @@ export const App = () => (
       <HeroSection />
       <AboutMeSection />
       <MyCareerSection />
+      <LatestProjectsSection />
     </Stack>
   </MainLayout>
 )

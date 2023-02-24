@@ -20,7 +20,9 @@ const customTheme = {
 
     mainCyan: '#6396ef',
 
-    gray: '#888',
+    darkBlueGray: '#1A2129',
+
+    gray: '#888888',
     softGray: '#f6f6f6',
     softGray1: '#f3f3f3',
   }

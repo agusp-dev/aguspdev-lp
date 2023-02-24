@@ -7,7 +7,20 @@ import {
   Image,
   useTheme
 } from '@chakra-ui/react'
+import styled from '@emotion/styled'
 import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
+
+const StyledCard = styled(Box)(
+  ({ theme }) => `
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    background-color: ${theme.color.white};
+    padding: 3.2rem 1.4rem;
+    border-radius: .4rem;
+    box-shadow: ${theme.color.gray}44 0 .5rem 1.5rem;
+  `
+)
 
 export const CareerCard = ({
   image,
@@ -20,7 +33,10 @@ export const CareerCard = ({
   const screenSize = useScreenSize()
 
   return (
-    <Stack gap='1.4rem' marginTop={isCenterCard || screenSize === CURRENT_SCREEN.MOBILE ? 0 : '7.2rem'}>
+    <Stack
+      gap='1.4rem'
+      marginTop={isCenterCard || screenSize === CURRENT_SCREEN.MOBILE ? 0 : '7.2rem'}
+    >
       {image && (
       <Image
         src={image?.src}
@@ -28,16 +44,7 @@ export const CareerCard = ({
         height={image?.height}
       />
       )}
-      <Box
-        display='flex'
-        flexDirection='column'
-        gap='1.6rem'
-        bgColor={theme.color.white}
-        width='18rem'
-        px='1.4rem'
-        py='3.2rem'
-        borderRadius='.4rem'
-      >
+      <StyledCard>
         {title && (
           <Heading as='h4' fontSize='1.6rem' color={theme.color.mainCyan} textAlign='center'>
             { title }
@@ -60,7 +67,7 @@ export const CareerCard = ({
             </Stack>
           </Stack>
         ))}
-      </Box>
+      </StyledCard>
     </Stack>
   )
 }
