@@ -7,6 +7,7 @@ import {
   Image,
   useTheme
 } from '@chakra-ui/react'
+import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
 export const CareerCard = ({
   image,
@@ -16,8 +17,10 @@ export const CareerCard = ({
   isCenterCard
 }) => {
   const theme = useTheme()
+  const screenSize = useScreenSize()
+
   return (
-    <Stack gap='1.4rem' marginTop={isCenterCard ? 0 : '7.2rem'}>
+    <Stack gap='1.4rem' marginTop={isCenterCard || screenSize === CURRENT_SCREEN.MOBILE ? 0 : '7.2rem'}>
       {image && (
       <Image
         src={image?.src}

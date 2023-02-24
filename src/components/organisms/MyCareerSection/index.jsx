@@ -6,23 +6,26 @@ import {
 import styled from '@emotion/styled'
 import { SectionTitle, CareerCard } from '~/components/molecules'
 import { DATA, DATA_KEYS } from './data'
+import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
 const StyledBackgroundBox = styled(Box)(
-  ({ theme }) => `
+  ({ theme, isMobileScreen, isTabletScreen }) => `
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: ${!isMobileScreen ? 'row' : 'column'};
+    align-items: ${isMobileScreen && 'center'};
     justify-content: center;
-    gap: 1.4rem;
+    gap: ${isMobileScreen ? '4rem' : '1.4rem'};
     flex-wrap: wrap;
-    padding: 0 1rem;
-    background: linear-gradient(
+    padding: 0 1rem 2rem;
+    background: ${!isMobileScreen && !isTabletScreen ? `linear-gradient(
       to bottom,
       ${theme.color.hardBlue} 0%,
-      ${theme.color.hardBlue} 50%, 
-      ${theme.color.softGray} 50%, 
-      ${theme.color.softGray} 100%
-    );
+      ${theme.color.hardBlue} 60%, 
+      ${theme.color.softGray1} 60%, 
+      ${theme.color.softGray1} 100%
+    );` : `${theme.color.hardBlue}`}
   `
 )
 
@@ -32,12 +35,14 @@ const projectionData = DATA[DATA_KEYS.PROJECTION]
 
 export const MyCareerSection = () => {
   const theme = useTheme()
+  const screenSize = useScreenSize()
 
   return (
     <Stack
       width='full'
       height='full'
       bgColor={theme.color.hardBlue}
+      margin='1rem 0 2rem'
     >
       <Stack width='full' gap='3rem' alignItems='center'>
         <SectionTitle
@@ -46,7 +51,10 @@ export const MyCareerSection = () => {
         >
           My Career
         </SectionTitle>
-        <StyledBackgroundBox>
+        <StyledBackgroundBox
+          isMobileScreen={screenSize === CURRENT_SCREEN.MOBILE}
+          isTabletScreen={screenSize === CURRENT_SCREEN.TABLET}
+        >
           <CareerCard {...beggininsData} />
           <CareerCard isCenterCard {...presentData} />
           <CareerCard {...projectionData} />
