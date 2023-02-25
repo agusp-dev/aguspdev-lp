@@ -4,15 +4,19 @@ import {
   Text,
   Stack,
   Image,
+  List,
+  ListItem,
+  ListIcon,
   useTheme
 } from '@chakra-ui/react'
+import { CheckCircleIcon } from '@chakra-ui/icons'
 import styled from '@emotion/styled'
 import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
 const StyledCard = styled(Stack)(
   ({ theme }) => `
-    width: 18rem;
-    gap: 1.2rem;
+    width: 19.8rem;
+    gap: 1.3rem;
     background-color: ${theme.color.white};
     padding: 3.2rem 1.4rem;
     border-radius: .4rem;
@@ -44,25 +48,28 @@ export const CareerCard = ({
       )}
       <StyledCard>
         {title && (
-          <Heading as='h4' fontSize='1.6rem' color={theme.color.mainCyan} textAlign='center'>
+          <Heading as='h4' fontSize='1.8rem' color={theme.color.mainCyan} textAlign='center'>
             { title }
           </Heading>
         )}
         {description && (
-          <Text fontSize='1rem' fontWeight={300}>
+          <Text fontSize='1rem' fontWeight={300} color={theme.color.darkGray} lineHeight='1.4rem' textAlign='center'>
             { description }
           </Text>
         )}
         {list?.map(({ title: listTitle, items }) => (
-          <Stack gap='.6rem'>
-            <Heading as='h6' fontSize='.9rem' fontWeight={600}>
+          <Stack gap='.6rem' mt='1rem !important'>
+            <Heading as='h6' fontSize='.9rem' fontWeight={600} color={theme.color.mainBlue}>
               { listTitle }
             </Heading>
-            <Stack>
+            <List spacing={2}>
               {items?.map((item) => (
-                <Text fontSize='.9rem' fontWeight={300}>{ item }</Text>
+                <ListItem>
+                  <ListIcon as={CheckCircleIcon} color={theme.color.mainBlue} />
+                  { item }
+                </ListItem>
               ))}
-            </Stack>
+            </List>
           </Stack>
         ))}
       </StyledCard>
