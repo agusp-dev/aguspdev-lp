@@ -17,10 +17,8 @@ export const AboutMeSection = () => {
   return (
     <Center
       width='full'
-      px='1rem'
-      pb={{ base: '4rem', md: '6.8rem' }}
+      padding='4.2rem 1rem 4rem'
       bg={theme.color.hardBlue}
-      paddingTop='5rem'
     >
       <Container maxW='3xl' centerContent>
         <Stack gap='3rem'>

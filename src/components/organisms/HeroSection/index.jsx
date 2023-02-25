@@ -44,7 +44,7 @@ export const HeroSection = () => {
           <ProfileImage
             width={{ base: '8.2rem', sm: '9.2rem', md: '12rem' }}
             borderRadius='50%'
-            border={`1px solid ${theme.color.white}`}
+            border={`2px solid ${theme.color.white}`}
           />
           <Stack zIndex={999}>
             <Heading as='h1' fontSize={{ base: '2.5rem', sm: '3rem', md: '4.2rem' }} textAlign='center'>
@@ -64,12 +64,14 @@ export const HeroSection = () => {
               justifyContent={{ base: 'center' }}
             >
               <Button
+                width='10rem'
                 border='1px'
                 variant='outline'
                 borderColor={theme.color.mainCyan}
                 color={theme.color.white}
                 fontWeight={400}
                 as={Link}
+                textDecoration='none !important'
                 href={`#${ABOUT_ME_ID}`}
                 _hover={{
                   backgroundColor: `${theme.color.mainCyan}33`

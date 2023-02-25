@@ -42,6 +42,7 @@ export const MyCareerSection = () => {
       width='full'
       height='full'
       bgColor={theme.color.hardBlue}
+      pt='4.2rem'
     >
       <Stack width='full' gap='3rem' alignItems='center'>
         <SectionTitle

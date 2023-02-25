@@ -13,7 +13,7 @@ export const LatestProjectsSection = () => {
       width='full'
       height='full'
       bgColor={theme.color.softGray1}
-      padding='4.8rem 1rem'
+      padding='5rem 1rem'
     >
       <Stack width='full' gap='3rem' alignItems='center'>
         <SectionTitle
