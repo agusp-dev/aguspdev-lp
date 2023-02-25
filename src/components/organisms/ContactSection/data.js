@@ -9,7 +9,7 @@ import {
 export const DATA = [{
   id: 'PHONE',
   title: 'Phone',
-  href: 'tel:33425235325',
+  href: 'tel:+5493515572479',
   icon: FaMobileAlt,
 }, {
   id: 'WHATSAPP',
@@ -24,7 +24,7 @@ export const DATA = [{
 }, {
   id: 'LINKEDIN',
   title: 'Linkedin',
-  href: 'www.linkedin.com/in/agusp-dev',
+  href: 'https://www.linkedin.com/in/agusp-dev',
   icon: FaLinkedinIn,
 }, {
   id: 'GITHUB',
