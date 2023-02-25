@@ -12,6 +12,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import styled from '@emotion/styled'
 import { ProfileImage } from '~/components/molecules'
+import { NAV_ITEMS } from './nav'
 
 const StyledLink = styled(Link)(
   ({ clr, size, weight }) => `
@@ -25,13 +26,6 @@ const StyledCollapse = styled(Collapse)`
   margin: 0 !important;
   padding: 0 !important;
 `
-
-const NAV_ITEMS = [
-  { key: 'about', title: 'ABOUT', href: '#about' },
-  { key: 'mycareer', title: 'MY CAREER', href: '#mycareer' },
-  { key: 'projects', title: 'PROJECTS', href: '#projects' },
-  { key: 'contact', title: 'CONTACT', href: '#contact' }
-]
 
 const DesktopMenu = () => {
   const theme = useTheme()
