@@ -38,11 +38,10 @@ export const MyCareerSection = () => {
   const screenSize = useScreenSize()
 
   return (
-    <Stack
+    <Box
       width='full'
       height='full'
       bgColor={theme.color.hardBlue}
-      margin='1rem 0 2rem'
     >
       <Stack width='full' gap='3rem' alignItems='center'>
         <SectionTitle
@@ -60,6 +59,6 @@ export const MyCareerSection = () => {
           <CareerCard {...projectionData} />
         </StyledBackgroundBox>
       </Stack>
-    </Stack>
+    </Box>
   )
 }

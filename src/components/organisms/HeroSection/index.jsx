@@ -1,9 +1,10 @@
 import {
-  Center, Container, Flex, Stack, Heading, Text, Button, useTheme, Box
+  Center, Container, Flex, Stack, Heading, Text, Button, useTheme, Box, Link
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import HeroImage from '~/assets/hero_bg.svg'
 import { ProfileImage } from '~/components/molecules'
+import { ABOUT_ME_ID } from '../sectionIds'
 
 const StyledTransparentLayer = styled.div(
   ({ theme }) => `
@@ -11,7 +12,7 @@ const StyledTransparentLayer = styled.div(
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 3.6rem);
     background: linear-gradient(
       to top, 
       ${theme.color.hardBlue} 1%, 
@@ -26,7 +27,7 @@ export const HeroSection = () => {
   return (
     <Center
       width='full'
-      height='100vh'
+      height='calc(100vh - 3.6rem)'
       backgroundImage={HeroImage}
       backgroundRepeat='no-repeat'
       backgroundSize='cover'
@@ -45,7 +46,7 @@ export const HeroSection = () => {
             borderRadius='50%'
             border={`1px solid ${theme.color.white}`}
           />
-          <Stack>
+          <Stack zIndex={999}>
             <Heading as='h1' fontSize={{ base: '2.5rem', sm: '3rem', md: '4.2rem' }} textAlign='center'>
               Hi, I&apos;m Agustin!
             </Heading>
@@ -68,6 +69,8 @@ export const HeroSection = () => {
                 borderColor={theme.color.mainCyan}
                 color={theme.color.white}
                 fontWeight={400}
+                as={Link}
+                href={`#${ABOUT_ME_ID}`}
                 _hover={{
                   backgroundColor: `${theme.color.mainCyan}33`
                 }}

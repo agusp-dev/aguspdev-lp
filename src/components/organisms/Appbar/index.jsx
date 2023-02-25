@@ -12,6 +12,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import styled from '@emotion/styled'
 import { ProfileImage } from '~/components/molecules'
+import { NAV_ITEMS } from './nav'
 
 const StyledLink = styled(Link)(
   ({ clr, size, weight }) => `
@@ -26,13 +27,6 @@ const StyledCollapse = styled(Collapse)`
   padding: 0 !important;
 `
 
-const NAV_ITEMS = [
-  { key: 'about', title: 'ABOUT', href: '#about' },
-  { key: 'mycareer', title: 'MY CAREER', href: '#mycareer' },
-  { key: 'projects', title: 'PROJECTS', href: '#projects' },
-  { key: 'contact', title: 'CONTACT', href: '#contact' }
-]
-
 const DesktopMenu = () => {
   const theme = useTheme()
   return (
@@ -41,7 +35,7 @@ const DesktopMenu = () => {
         <StyledLink
           key={key}
           href={href}
-          clr={theme.color.mainCyan}
+          clr={theme.color.white}
           size='1rem'
           weight={500}
         >
@@ -76,7 +70,7 @@ const MobileMenu = () => {
       <StyledCollapse in={isOpen} animateOpacity>
         <Stack
           width='full'
-          bg={`${theme.color.black}44`}
+          bg={`${theme.color.black}88`}
           p='1rem'
           position='fixed'
           top='4.2rem'
@@ -88,7 +82,7 @@ const MobileMenu = () => {
             <StyledLink
               key={key}
               href={href}
-              clr={theme.color.mainCyan}
+              clr={theme.color.white}
               size='1rem'
               weight={500}
             >
@@ -115,9 +109,9 @@ export const Appbar = () => {
     <Box
       position='fixed'
       width='full'
-      height='4.8rem'
-      bg={`${theme.color.black}44`}
-      color='white'
+      height='3.6rem'
+      bg={`${theme.color.hardBlue}AA`}
+      color={theme.color.white}
       display='flex'
       alignItems='center'
       justifyContent='space-between'

@@ -20,6 +20,7 @@ export const AboutMeSection = () => {
       px='1rem'
       pb={{ base: '4rem', md: '6.8rem' }}
       bg={theme.color.hardBlue}
+      paddingTop='5rem'
     >
       <Container maxW='3xl' centerContent>
         <Stack gap='3rem'>
