@@ -26,7 +26,7 @@ const StyledCard = styled(Box)(
     border-radius: .4rem;
     padding: 1.6rem 1.6rem 1.2rem;
     border: 1px solid ${theme.color.white};
-    box-shadow: ${theme.color.gray}44 0 .5rem 1.5rem;
+    box-shadow: ${theme.color.gray}88 0 .5rem 1.5rem;
   `
 )
 
@@ -44,9 +44,9 @@ const StyledMyWorkCard = styled(Flex)(
 const StyledTechChip = styled(Flex)(
   ({ theme }) => `
     padding: .1rem .3rem;
-    background-color: ${theme.color.mainCyan}22;
+    background-color: ${theme.color.mainCyan}EE;
     border-radius: .4rem;
-    color: ${theme.color.hardBlue};
+    color: ${theme.color.white};
     font-size: .8rem;
     font-weight: 300;
   `

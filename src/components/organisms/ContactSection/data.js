@@ -1,21 +1,34 @@
+import {
+  FaMobileAlt,
+  FaWhatsapp,
+  FaRegEnvelope,
+  FaLinkedinIn,
+  FaGithub
+} from 'react-icons/fa'
+
 export const DATA = [{
   id: 'PHONE',
   title: 'Phone',
-  url: 'tel:33425235325'
+  href: 'tel:33425235325',
+  icon: FaMobileAlt,
 }, {
   id: 'WHATSAPP',
   title: 'Whatsapp',
-  url: 'https://web.whatsapp.com/1341244'
+  href: 'https://api.whatsapp.com/send?phone=5493515572479',
+  icon: FaWhatsapp,
 }, {
   id: 'EMAIL',
   title: 'Email',
-  url: 'perezp.agustin@gmail.com'
+  href: 'mailto:perezp.agustin@gmail.com',
+  icon: FaRegEnvelope,
 }, {
   id: 'LINKEDIN',
   title: 'Linkedin',
-  url: 'https://www.linkedin.com/1234'
+  href: 'www.linkedin.com/in/agusp-dev',
+  icon: FaLinkedinIn,
 }, {
   id: 'GITHUB',
   title: 'Github',
-  url: 'https://www.github.com/1234'
+  href: 'https://github.com/agusp-dev',
+  icon: FaGithub,
 }]
