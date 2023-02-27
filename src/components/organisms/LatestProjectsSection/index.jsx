@@ -4,7 +4,7 @@ import {
   useTheme
 } from '@chakra-ui/react'
 import { SectionTitle, ProjectCard } from '~/components/molecules'
-import { DATA } from './data'
+import { latestProjectsData } from '~/mock'
 
 export const LatestProjectsSection = () => {
   const theme = useTheme()
@@ -20,10 +20,10 @@ export const LatestProjectsSection = () => {
           color={theme.color.darkBlueGray}
           withSeparator
         >
-          Latest Projects
+          { latestProjectsData?.title }
         </SectionTitle>
         <Stack width='100%' alignItems='center' gap='.8rem'>
-          {DATA?.map(({ id, ...props }) => <ProjectCard key={id} id={id} {...props} />)}
+          {latestProjectsData?.projects?.map(({ id, ...props }) => <ProjectCard key={id} id={id} {...props} />)}
         </Stack>
       </Stack>
     </Box>

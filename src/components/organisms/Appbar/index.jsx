@@ -12,10 +12,17 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import styled from '@emotion/styled'
 import { ProfileImage } from '~/components/molecules'
-import { NAV_ITEMS } from './nav'
+import { navData } from '~/mock'
 
 const StyledLink = styled(Link)(
-  ({ clr, size, weight }) => `
+  ({
+    isMobileMode,
+    clr,
+    size,
+    weight
+  }) => `
+    width: ${isMobileMode ? '100%' : 'auto'};
+    text-align: ${isMobileMode ? 'center' : 'left'};
     color: ${clr};
     font-size: ${size};
     font-weight: ${weight};
@@ -31,10 +38,10 @@ const DesktopMenu = () => {
   const theme = useTheme()
   return (
     <Flex gap='3.2rem'>
-      {NAV_ITEMS?.map(({ key, title, href }) => (
+      {navData?.map(({ title, href }) => (
         <StyledLink
-          key={key}
-          href={href}
+          key={title}
+          href={href ?? '/'}
           clr={theme.color.white}
           size='1rem'
           weight={500}
@@ -78,13 +85,15 @@ const MobileMenu = () => {
           gap='.9rem'
           alignItems='center'
         >
-          {NAV_ITEMS?.map(({ key, title, href }) => (
+          {navData?.map(({ title, href }) => (
             <StyledLink
-              key={key}
-              href={href}
+              key={title}
+              href={href ?? '/'}
+              isMobileMode
               clr={theme.color.white}
               size='1rem'
               weight={500}
+              onClick={onToggle}
             >
               { title }
             </StyledLink>

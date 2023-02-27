@@ -4,7 +4,7 @@ import {
 import styled from '@emotion/styled'
 import HeroImage from '~/assets/hero_bg.svg'
 import { ProfileImage } from '~/components/molecules'
-import { ABOUT_ME_ID } from '../sectionIds'
+import { heroData } from '~/mock'
 
 const StyledTransparentLayer = styled.div(
   ({ theme }) => `
@@ -48,7 +48,7 @@ export const HeroSection = () => {
           />
           <Stack zIndex={999}>
             <Heading as='h1' fontSize={{ base: '2.5rem', sm: '3rem', md: '4.2rem' }} textAlign='center'>
-              Hi, I&apos;m Agustin!
+              {heroData?.title}
             </Heading>
             <Text
               fontSize={{ base: '1.2rem', sm: '1.3rem', md: '1.5rem' }}
@@ -56,7 +56,7 @@ export const HeroSection = () => {
               textAlign={{ base: 'center', sm: 'left' }}
               mt={{ sm: '0 !important' }}
             >
-              Passionate Frontend Engineer
+              {heroData?.subTitle}
             </Text>
             <Box
               marginTop={{ base: '1.8rem !important', sm: '1.4rem !important' }}
@@ -72,7 +72,7 @@ export const HeroSection = () => {
                 fontWeight={400}
                 as={Link}
                 textDecoration='none !important'
-                href={`#${ABOUT_ME_ID}`}
+                href={heroData?.mainCta?.href}
                 _hover={{
                   backgroundColor: `${theme.color.mainCyan}33`
                 }}
@@ -80,7 +80,7 @@ export const HeroSection = () => {
                   backgroundColor: `${theme.color.mainCyan}66`
                 }}
               >
-                Read More
+                {heroData?.mainCta?.title}
               </Button>
             </Box>
           </Stack>

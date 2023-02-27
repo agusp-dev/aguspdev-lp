@@ -1,0 +1,23 @@
+export const SECTION = {
+  HERO: 'HERO',
+  ABOUT_ME: 'ABOUT_ME',
+  CAREER: 'CAREER',
+  LATEST_PROJECTS: 'LATEST_PROJECTS',
+  CONTACT: 'CONTACT'
+}
+
+export const SECTION_TITLES = {
+  [SECTION.HERO]: 'HERO',
+  [SECTION.ABOUT_ME]: 'ABOUT ME',
+  [SECTION.CAREER]: 'CAREER',
+  [SECTION.LATEST_PROJECTS]: 'LATEST PROJECTS',
+  [SECTION.CONTACT]: 'CONTACT'
+}
+
+export const SECTION_IDS = {
+  [SECTION.HERO]: 'hero',
+  [SECTION.ABOUT_ME]: 'about-me',
+  [SECTION.CAREER]: 'career',
+  [SECTION.LATEST_PROJECTS]: 'latest-projects',
+  [SECTION.CONTACT]: 'contact'
+}

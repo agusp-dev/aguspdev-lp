@@ -5,7 +5,7 @@ import {
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import { SectionTitle, CareerCard } from '~/components/molecules'
-import { DATA, DATA_KEYS } from './data'
+import { careerData, CAREER_DATA_KEYS } from '~/mock'
 import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
 const StyledBackgroundBox = styled(Box)(
@@ -29,9 +29,9 @@ const StyledBackgroundBox = styled(Box)(
   `
 )
 
-const beggininsData = DATA[DATA_KEYS.BEGINNINS]
-const presentData = DATA[DATA_KEYS.PRESENT]
-const projectionData = DATA[DATA_KEYS.PROJECTION]
+const beggininsData = careerData?.content[CAREER_DATA_KEYS.BEGINNINS]
+const presentData = careerData?.content[CAREER_DATA_KEYS.PRESENT]
+const projectionData = careerData?.content[CAREER_DATA_KEYS.PROJECTION]
 
 export const MyCareerSection = () => {
   const theme = useTheme()
@@ -49,7 +49,7 @@ export const MyCareerSection = () => {
           color={theme.color.white}
           withSeparator
         >
-          My Career
+          { careerData?.title }
         </SectionTitle>
         <StyledBackgroundBox
           isMobileScreen={screenSize === CURRENT_SCREEN.MOBILE}
