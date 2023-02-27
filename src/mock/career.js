@@ -18,17 +18,17 @@ export const careerData = {
         height: '6rem',
       },
       title: 'Beginnins',
-      description: `I started my career as a dev,
-      developing Native Android (Java)
-      and all your environment.`,
+      description: `I started my career as a mobile dev,
+      creative Native Android apps with Java.`,
       list: [{
         title: 'Technologies',
         items: [
           'Java for Android',
           'Material Design',
-          'Kotlin (only 2 projects)',
+          'Kotlin (only 1 projects)',
           'Butterknife',
-          'Dagger'
+          'Dagger',
+          'Google Play deployment'
         ]
       }, {
         title: 'Design Patters',
@@ -47,9 +47,9 @@ export const careerData = {
       },
       title: 'Present',
       description: `I am currently focused on develop
-      as a Frontend. Makes approx. 3
+      as a Frontend. Makes approx. 5
       years that I am working with JS
-      and React.js, along with all its
+      and React.js and 3 with Next.js Framework, along with all its
       environment.`,
       list: [{
         title: 'Technologies',
@@ -57,23 +57,21 @@ export const careerData = {
           'Javascript',
           'React.js',
           'Next.js',
+          'SSR',
           'Flux',
-          'Redux (with unks and Szagas)',
+          'Redux (with thunks and Szagas)',
           'Hooks',
           'Context Api',
-          'Styled Components',
-          'Bootstrap',
-          'Material UI',
-          'Chakra UI',
-
+          'Styled Components and Emotion',
+          'Css Frameworks: MUI - Chakra UI - Tailwind'
         ]
       }, {
         title: 'In the near future...',
         items: [
           'Testing - Jest',
+          'Cypress',
           'Typescript',
           'React Native',
-          'Another JS and React.js libs'
         ]
       }]
     },
@@ -85,11 +83,9 @@ export const careerData = {
       },
       title: 'Projection',
       description: `In the near future I see myself as
-      JS Fullstack Dev, developing with
-      the MERN stack, but I don't rule
-      out learning others languages and
-      technologies like Flutter (Dart) or
-      Go, etc.`,
+      JS Fullstack Dev, creating some great apps with MERN stack,
+      but I don't rule out learning others languages and
+      technologies like Flutter with Dart.`,
       list: [{
         title: 'Technologies',
         items: [
@@ -97,6 +93,7 @@ export const careerData = {
           'Express',
           'Mongo DB',
           'GraphQL',
+          'SQL',
           'Dart',
           'Flutter'
         ]
