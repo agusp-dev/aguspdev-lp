@@ -6,29 +6,25 @@ import {
   MyCareerSection,
   LatestProjectsSection,
   ContactSection,
-  HERO_ID,
-  ABOUT_ME_ID,
-  MY_CAREER_ID,
-  MY_LATEST_PROJECTS_ID,
-  CONTACT_ID
 } from './components'
+import { SECTION, SECTION_IDS } from '~/mock'
 
 export const App = () => (
   <MainLayout>
     <Stack spacing={0}>
-      <Box id={HERO_ID} as='section'>
+      <Box id={SECTION_IDS[SECTION.HERO]} as='section'>
         <HeroSection />
       </Box>
-      <Box id={ABOUT_ME_ID} as='section'>
+      <Box id={SECTION_IDS[SECTION.ABOUT_ME]} as='section'>
         <AboutMeSection />
       </Box>
-      <Box id={MY_CAREER_ID} as='section'>
+      <Box id={SECTION_IDS[SECTION.CAREER]} as='section'>
         <MyCareerSection />
       </Box>
-      <Box id={MY_LATEST_PROJECTS_ID} as='section'>
+      <Box id={SECTION_IDS[SECTION.LATEST_PROJECTS]} as='section'>
         <LatestProjectsSection />
       </Box>
-      <Box id={CONTACT_ID} as='section'>
+      <Box id={SECTION_IDS[SECTION.CONTACT]} as='section'>
         <ContactSection />
       </Box>
     </Stack>

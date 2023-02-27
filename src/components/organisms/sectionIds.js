@@ -1,5 +1,0 @@
-export const HERO_ID = 'hero_id'
-export const ABOUT_ME_ID = 'about_me_id'
-export const MY_CAREER_ID = 'my_career_id'
-export const MY_LATEST_PROJECTS_ID = 'my_latest_projects_id'
-export const CONTACT_ID = 'contact_id'

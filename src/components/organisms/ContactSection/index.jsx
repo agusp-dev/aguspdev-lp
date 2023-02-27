@@ -9,7 +9,7 @@ import {
   useTheme,
 } from '@chakra-ui/react'
 import { SectionTitle } from '~/components/molecules'
-import { DATA } from './data'
+import { contactData } from '~/mock'
 
 const SocialMediaBox = ({
   title,
@@ -55,6 +55,7 @@ export const ContactSection = () => {
     <Stack
       width='full'
       height='full'
+      alignItems='center'
       bgColor={theme.color.hardBlue}
       padding='4.8rem 1rem'
       gap='3rem'
@@ -63,10 +64,10 @@ export const ContactSection = () => {
         color={theme.color.white}
         withSeparator
       >
-        Contact
+        { contactData?.title }
       </SectionTitle>
-      <Flex px='2rem' gap='1.4rem' justifyContent='center' flexWrap='wrap'>
-        {DATA?.map(({ id, ...props }) => (
+      <Flex maxWidth={{ base: '20rem', sm: 'full' }} px='2rem' gap='1.4rem' justifyContent='center' flexWrap='wrap'>
+        {contactData?.socialMedias?.map(({ id, ...props }) => (
           <SocialMediaBox
             key={id}
             {...props}
