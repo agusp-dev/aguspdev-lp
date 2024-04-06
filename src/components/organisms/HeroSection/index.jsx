@@ -2,7 +2,7 @@ import {
   Center, Container, Flex, Stack, Heading, Text, Button, useTheme, Box, Link
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
-import HeroImage from '~/assets/hero_bg.svg'
+import HeroImage from '~/assets/hero_bg.jpg'
 import { ProfileImage } from '~/components/molecules'
 import { heroData } from '~/mock'
 
