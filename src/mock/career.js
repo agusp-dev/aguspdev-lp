@@ -19,7 +19,7 @@ export const careerData = {
       },
       title: 'Beginnins',
       description: `I started my career as a mobile dev,
-      creative Native Android apps with Java.`,
+      creating Native Android apps with Java.`,
       list: [{
         title: 'Technologies',
         items: [
@@ -57,21 +57,21 @@ export const careerData = {
           'Javascript',
           'React.js',
           'Next.js',
-          'SSR',
+          'Mongo DB / Mongoose',
           'Flux',
-          'Redux (with thunks and Szagas)',
-          'Hooks',
-          'Context Api',
-          'Styled Components and Emotion',
-          'Css Frameworks: MUI - Chakra UI - Tailwind'
+          'Tanstack Query',
+          'MUI - Chakra UI - Tailwind - Styled Components / Emotion',
+          'Github Actions',
         ]
       }, {
-        title: 'In the near future...',
+        title: 'I am training and gaining backend skills...',
         items: [
-          'Testing - Jest',
-          'Cypress',
-          'Typescript',
-          'React Native',
+          'Testing',
+          'Node.js',
+          'Express',
+          'Nest',
+          'SQL',
+          'PostgreSQL'
         ]
       }]
     },
@@ -82,20 +82,17 @@ export const careerData = {
         height: '4rem',
       },
       title: 'Projection',
-      description: `In the near future I see myself as
-      JS Fullstack Dev, creating some great apps with MERN stack,
-      but I don't rule out learning others languages and
-      technologies like Flutter with Dart.`,
+      description: `In the near future, I plan to specialize in Backend technologies, TypeScript and React Native, 
+      while also expanding my knowledge in CI/CD practices.`,
       list: [{
         title: 'Technologies',
         items: [
-          'Node.js',
-          'Express',
-          'Mongo DB',
+          'Backend',
+          'React Native',
+          'Typescript',
           'GraphQL',
-          'SQL',
-          'Dart',
-          'Flutter'
+          'AWS',
+          'CI/CD',
         ]
       }]
     }
