@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: 'https://agusp.dev',
+  base: 'https://agusp.dev/',
   plugins: [react()],
   resolve: {
     alias: [
