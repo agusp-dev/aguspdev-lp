@@ -39,5 +39,8 @@ module.exports = {
     'import/no-unresolved': RULES.OFF,
     'import/named': RULES.OFF,
     'comma-dangle': RULES.OFF,
+    'react/jsx-props-no-spreading': RULES.OFF,
+    quotes: [RULES.ERROR, 'single', 'avoid-escape'],
+    'jsx-quotes': [RULES.ERROR, 'prefer-single'],
   },
 };
