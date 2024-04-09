@@ -58,7 +58,6 @@ export const careerData = {
           'React.js',
           'Next.js',
           'Mongo DB / Mongoose',
-          'Flux',
           'Tanstack Query',
           'MUI - Chakra UI - Tailwind - Styled Components / Emotion',
           'Github Actions',

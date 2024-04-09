@@ -3,7 +3,7 @@ import {
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 import HeroImage from '~/assets/hero_bg.jpg'
-import { ProfileImage } from '~/components/molecules'
+import { FlipProfileImg } from '~/components/molecules'
 import { heroData } from '~/mock'
 
 const StyledTransparentLayer = styled.div(
@@ -41,11 +41,7 @@ export const HeroSection = () => {
           alignItems='center'
           justifyContent='center'
         >
-          <ProfileImage
-            width={{ base: '8.2rem', sm: '9.2rem', md: '12rem' }}
-            borderRadius='50%'
-            border={`2px solid ${theme.color.white}`}
-          />
+          <FlipProfileImg />
           <Stack zIndex={999}>
             <Heading as='h1' fontSize={{ base: '2.5rem', sm: '3rem', md: '4.2rem' }} textAlign='center'>
               {heroData?.title}

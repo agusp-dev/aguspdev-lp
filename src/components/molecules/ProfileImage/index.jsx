@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types'
 import { Image } from '@chakra-ui/react'
-import ProfileImg from '~/assets/profile_img.jpg'
 
 export const ProfileImage = ({
+  src,
   width,
   height,
   borderRadius,
   border
 }) => (
   <Image
-    src={ProfileImg}
+    src={src}
     alt='My profile'
     width={width ?? 'auto'}
     height={height ?? 'auto'}
@@ -19,6 +19,7 @@ export const ProfileImage = ({
 )
 
 ProfileImage.propTypes = {
+  src: PropTypes.string.isRequired,
   width: PropTypes.shape({}),
   height: PropTypes.shape({}),
   borderRadius: PropTypes.string.isRequired,
