@@ -11,6 +11,7 @@ import {
   useTheme,
 } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import MeImg from '~/assets/me_img.jpeg'
 import { ProfileImage } from '../ProfileImage'
 import { useScreenSize, CURRENT_SCREEN } from '~/hooks'
 
@@ -53,17 +54,12 @@ const StyledTechChip = styled(Flex)(
 )
 
 export const ProjectCard = ({
-  // id,
   title,
   previewImg,
-  // company,
-  // startDate,
-  // endDate,
   shortDescription,
   myWork,
   url,
   techStack,
-  // githubUrl,
 }) => {
   const theme = useTheme()
   const screenSize = useScreenSize()
@@ -100,6 +96,7 @@ export const ProjectCard = ({
         {myWork && (
           <StyledMyWorkCard>
             <ProfileImage
+              src={MeImg}
               width={{ base: '2rem' }}
               height={{ base: '2rem' }}
               borderRadius='50%'
@@ -129,24 +126,16 @@ export const ProjectCard = ({
 }
 
 ProjectCard.propTypes = {
-  // id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   previewImg: PropTypes.string,
-  // company: PropTypes.string,
-  // startDate: PropTypes.string.isRequired,
-  // endDate: PropTypes.string,
   shortDescription: PropTypes.string.isRequired,
   myWork: PropTypes.string.isRequired,
   url: PropTypes.string,
   techStack: PropTypes.arrayOf(PropTypes.shape({})),
-  // githubUrl: PropTypes.string,
 }
 
 ProjectCard.defaultProps = {
   previewImg: null,
-  // company: null,
-  // endDate: null,
   url: null,
   techStack: null,
-  // githubUrl: null
 }

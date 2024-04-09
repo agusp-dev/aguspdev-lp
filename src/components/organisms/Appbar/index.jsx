@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import styled from '@emotion/styled'
+import MeImg from '~/assets/me_img.jpeg'
 import { ProfileImage } from '~/components/molecules'
 import { navData } from '~/mock'
 
@@ -128,6 +129,7 @@ export const Appbar = () => {
       zIndex={999}
     >
       <ProfileImage
+        src={MeImg}
         width={{ base: '2.4rem' }}
         borderRadius='50%'
         border={`2px solid ${theme.color.white}`}
